@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Party</title>
+</head>
+<body>
+<a th:href="'/friends/new'">Add a friend!</a>
+<h1>List of friends</h1>
+<div th:each="friend : ${friends}" th:object="${friend}">
+  <p th:text="*{firstName} + ' ' + *{lastName}"></p>
+</div>
+</body>
+</html>
